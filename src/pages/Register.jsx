@@ -1,10 +1,8 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { registerUser } from "../services/authService";
 
 function Register() {
-  const navigate = useNavigate();
-
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -33,17 +31,13 @@ function Register() {
       localStorage.removeItem("user");
 
       setSuccess(true);
-      setMessage("Registration successful. Please login to continue.");
+      setMessage("Registration successful. Please click Login and sign in.");
 
       setFormData({
         fullName: "",
         email: "",
         password: "",
       });
-
-      setTimeout(() => {
-        navigate("/login");
-      }, 1500);
     } catch (error) {
       setMessage(error.response?.data?.message || "Registration failed");
       setSuccess(false);
