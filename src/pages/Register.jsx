@@ -12,6 +12,7 @@ function Register() {
   });
 
   const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -23,25 +24,29 @@ function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     setMessage("");
+    setSuccess(false);
 
     try {
-      const response = await registerUser(formData);
+      await registerUser(formData);
 
-      localStorage.setItem("token", response.token);
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
 
-      localStorage.setItem(
-        "user",
-        JSON.stringify({
-          userId: response.userId,
-          fullName: response.fullName,
-          email: response.email,
-          role: response.role,
-        })
-      );
+      setSuccess(true);
+      setMessage("Registration successful. Please login to continue.");
 
-      navigate("/dashboard");
+      setFormData({
+        fullName: "",
+        email: "",
+        password: "",
+      });
+
+      setTimeout(() => {
+        navigate("/login");
+      }, 1500);
     } catch (error) {
       setMessage(error.response?.data?.message || "Registration failed");
+      setSuccess(false);
     }
   };
 
@@ -49,7 +54,11 @@ function Register() {
     <div className="auth-card">
       <h2>Create Account</h2>
 
-      {message && <p className="error">{message}</p>}
+      {message && (
+        <p className={success ? "success" : "error"}>
+          {message}
+        </p>
+      )}
 
       <form onSubmit={handleRegister}>
         <label>Full Name</label>
