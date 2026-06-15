@@ -1,16 +1,135 @@
-# React + Vite
+# 🖥️ ThreatGuard Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React.js based user interface for the ThreatGuard URL Threat Detection and Security Monitoring Platform.
 
-Currently, two official plugins are available:
+The frontend provides a secure and responsive experience for users and administrators to scan URLs, manage threats, track activity, and monitor security statistics.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### User Features
 
-## Expanding the ESLint configuration
+- User Registration
+- Secure Login
+- URL Scanning
+- Scan History
+- Dashboard Analytics
+- Profile Access
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Admin Features
+
+- Admin Dashboard
+- User Monitoring
+- Malicious URL Management
+- Threat Monitoring
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React.js
+- JavaScript
+- Axios
+- HTML5
+- CSS3
+
+### Integration
+
+- Spring Boot REST APIs
+- JWT Authentication
+
+### Deployment
+
+- Vercel
+
+---
+
+## 🏗️ Application Modules
+
+### Authentication Module
+
+- Login Page
+- Registration Page
+- JWT Token Handling
+
+### Dashboard Module
+
+Displays:
+- Total Scans
+- Safe URLs
+- Malicious URLs
+- Activity Statistics
+
+### URL Scanner Module
+
+Allows users to:
+- Submit URLs
+- View Threat Results
+- Track URL Status
+
+### History Module
+
+Displays:
+- Previous Scans
+- Threat Records
+- Scan Timestamps
+
+### Admin Module
+
+Provides:
+- User Monitoring
+- Threat Management
+- Security Administration
+
+---
+
+## 📈 Project Highlights
+
+- Built 5+ responsive React modules.
+- Integrated frontend with Spring Boot REST APIs.
+- Implemented JWT-based authentication flow.
+- Developed dashboard visualizations and history tracking.
+- Deployed frontend using Vercel.
+
+---
+
+## 🌐 Deployment
+
+Frontend Hosting:
+- Vercel
+
+Backend API:
+- Spring Boot (Render)
+
+Database:
+- Aiven MySQL Cloud
+
+---
+
+## 🎯 Learning Outcomes
+
+Through this project, I improved my understanding of:
+
+- React Component Architecture
+- API Integration
+- JWT Authentication Flow
+- State Management
+- Frontend Security
+- Deployment and Hosting
+
+---
+
+## 👨‍💻 Developer
+
+### Charan Kumar Dasari
+
+Java Full Stack Developer
+
+LinkedIn:
+https://www.linkedin.com/in/charankumar-dasari/
+
+GitHub:
+https://github.com/charankumar-dasari
